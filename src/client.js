@@ -233,6 +233,7 @@ class Client extends Base {
     // Thomas Richter: added 2 namespaces to root
     envelope.doc.attribute('xmlns:a', 'http://www.w3.org/2005/08/addressing');
     envelope.doc.attribute('xmlns:t', 'http://tempuri.org/');
+    
     message = envelope.body.toString({pretty: prettyPrint});
     xml = envelope.doc.end({pretty: prettyPrint});
     xml = xml.replace(/<string>/g,'<t:string>');
